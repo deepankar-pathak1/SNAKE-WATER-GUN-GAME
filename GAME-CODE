@@ -1,0 +1,103 @@
+# SNAKE WATER AND GUN GAME
+import random
+no_of_chance = 10
+played_chances = 0
+c_point = 0
+h_point = 0
+
+print("** WELCOME TO SNAKE WATER AND GUN GAME **")
+print("*S FOR SNAKE* *W FOR WATER* AND *G FOR GUN*")
+
+while played_chances < no_of_chance:
+    choices = input("Enter Here : ")
+    lst = ["S","W","G"]
+    r_c = random.choice(lst)
+
+    if choices == r_c:
+        print("No one wins")
+    elif (choices == "S" and r_c == "W"):
+        print("Snake will drink water and Human wins")
+        h_point += 1
+        print(f"Computer point is {c_point} and Human point is {h_point}")
+    elif (choices == "S" and r_c == "G"):
+        print("Gun will kill snake and Computer wins")
+        c_point += 1
+        print(f"Computer point is {c_point} and Human point is {h_point}")
+    elif (choices == "W" and r_c == "S"):
+        print("Computer wins")
+        c_point += 1
+        print(f"Computer point is {c_point} and Human point is {h_point}")
+    elif (choices=="W" and r_c=="G"):
+        print("Computer wins")
+        c_point += 1
+        print(f"Computer point is {c_point} and Human point is {h_point}")
+    elif (choices=="G" and r_c=="S"):
+        print("Human wins")
+        h_point += 1
+        print(f"Computer point is {c_point} and Human point is {h_point}")
+    elif (choices=="G" and r_c=="W"):
+        print("Human wins")
+        print(f"Computer point is {c_point} and Human point is {h_point}")
+    else:
+        print("Enter Valid Choice")
+
+    played_chances += 1
+
+    print(f"Played {played_chances} and Chnaces Left {no_of_chance-played_chances}")
+    print(f"Computer Point {c_point} and Human point {h_point}")
+    
+    
+    
+    ** OUTPUT ** 
+    
+    ** WELCOME TO SNAKE WATER AND GUN GAME **
+*S FOR SNAKE* *W FOR WATER* AND *G FOR GUN*
+Enter Here : S
+Gun will kill snake and Computer wins
+Computer point is 1 and Human point is 0
+Played 1 and Chnaces Left 9
+Computer Point 1 and Human point 0
+Enter Here : W
+Computer wins
+Computer point is 2 and Human point is 0
+Played 2 and Chnaces Left 8
+Computer Point 2 and Human point 0
+Enter Here : S
+Snake will drink water and Human wins
+Computer point is 2 and Human point is 1
+Played 3 and Chnaces Left 7
+Computer Point 2 and Human point 1
+Enter Here : S
+Gun will kill snake and Computer wins
+Computer point is 3 and Human point is 1
+Played 4 and Chnaces Left 6
+Computer Point 3 and Human point 1
+Enter Here : S
+Gun will kill snake and Computer wins
+Computer point is 4 and Human point is 1
+Played 5 and Chnaces Left 5
+Computer Point 4 and Human point 1
+Enter Here : S
+Gun will kill snake and Computer wins
+Computer point is 5 and Human point is 1
+Played 6 and Chnaces Left 4
+Computer Point 5 and Human point 1
+Enter Here : W
+No one wins
+Played 7 and Chnaces Left 3
+Computer Point 5 and Human point 1
+Enter Here : G
+No one wins
+Played 8 and Chnaces Left 2
+Computer Point 5 and Human point 1
+Enter Here : S
+No one wins
+Played 9 and Chnaces Left 1
+Computer Point 5 and Human point 1
+Enter Here : S
+Snake will drink water and Human wins
+Computer point is 5 and Human point is 2
+Played 10 and Chnaces Left 0
+Computer Point 5 and Human point 2
+
+Process finished with exit code 0
